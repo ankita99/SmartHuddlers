@@ -1,0 +1,32 @@
+<div class="jumbotron text-center" style="height: 130px; padding-top: 25px;">
+<h4 align="left">Location : <select>
+  <option value="Nagpur">Nagpur</option>
+</select> </h4>
+<p align="left" style="font-size: 18px;">You are seeing current status of all the rooms at location : Nagpur </p>
+    <!-- <p>{{ message }}</p> -->
+</div>
+
+<div class="container ng-scope">
+<div class="col-md-6"><label>Current Time: {{CurrentDate | date:'HH:mm:ss'}}</label></div>
+<div style="text-align: right;" class="col-md-6"><label>{{timer}}</label></div>
+</div>
+<div class="boxcontainer" ng-repeat="room in adhocStatus.roomAvailability">
+<div ng-class="room.roomStatus"><div class="test"><label class="roomname">{{room.roomName}}</label><span class="location">M4-Nagpur</span></div></div>
+</div>
+
+<div class="container">
+  <div class="notes">
+  <div class="col-md-3">
+  <div class="grrenbox"></div><span  style="padding-left: 10px;">Available</span> 
+  </div>
+  <div class="col-md-3">
+  <div class="redbox"></div><span style="padding-left: 10px;">Booked and occupied</span> 
+  </div>
+  <div class="col-md-3"> 
+  <div class="yellowbox"></div><span style="padding-left: 10px;">Booked but empty</span> 
+  </div>
+  <div class="col-md-3">
+  <div class="violetbox"></div><span style="padding-left: 10px;">Not Booked but occupied</span> 
+  </div>
+  </div>
+</div>

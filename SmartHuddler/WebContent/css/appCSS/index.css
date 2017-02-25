@@ -1,0 +1,23 @@
+.md-truncate{
+	position: absolute; 
+	left: 90px; 
+	right: 170px; 
+	top: 13px; 
+	bottom: 13px;
+}
+
+.logo{
+	width: 70px;
+}
+
+.appCard{
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.userInfo{
+	padding-right: 10px;
+}
+
+.availRooms{
+	height: 200px;
+}

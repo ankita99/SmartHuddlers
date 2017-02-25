@@ -1,0 +1,235 @@
+@CHARSET "ISO-8859-1";
+/*************************************************************
+Persistent Systems Ltd. 
+File Name: play.css
+Version: 1.0
+Author Name: Shail Rakhunde
+Created In: August, 2015
+//////////////////////////////////////////////////////////////
+
+Project Details:
+--------------
+Project Name: THINKlab - Story Composer 2
+Layout: fluid
+Scope: Play story ImpressJS presentation
+//////////////////////////////////////////////////////////////
+**************************************************************/
+
+.tl-sc-media-slot .carousel {
+    /* position: absolute; */
+    height: 100%;
+}
+
+.tl-sc-media-slot .carousel-inner {
+    position : static;
+    width: 100%;
+    height : 100%;
+    overflow: hidden;
+}
+
+.tl-sc-play-frame {
+	/* margin: 1% 5% 1% 5%; */
+	/* font-size: 480px; */
+	/* font-size: 34vw; */				/* Size as per older Story Composer UI */
+	font-size: 25.5vw;				/* Proper size for normal screen */
+	/* font-size: 2630%; */				/* Proper size for normal screen */
+	/* width: 3.104em;
+	height: 0.5677em; */
+	width: 3.18em;
+	height: 0.625em;
+  	padding: 0.03em 0.04em 0.03em 0.04em;
+}
+@media (min-width: 768px) {
+  .tl-sc-play-frame {
+    font-size: 708px;
+  }
+}
+@media (min-width: 992px) {
+  .tl-sc-play-frame {
+    font-size: 915px;
+  }
+}
+@media (min-width: 1200px) {
+  .tl-sc-play-frame {
+    font-size: 1101px;
+  }
+}
+.tl-sc-play-area {
+	position: relative;
+	width: 3.104em;
+	height: 0.5625em;
+}
+.tl-sc-template-slot.step.proxy {
+	border: none;
+}
+
+.tl-sc-navigation-frame  {
+	/* margin: 1% 5% 1% 5%; */
+	/* font-size: 480px; */
+	/* font-size: 34vw; */				/* Size as per older Story Composer UI */
+	font-size: 25.5vw;				/* Proper size for normal screen */
+	/* font-size: 2630%; */				/* Proper size for normal screen */
+	/* width: 3.104em;
+	height: 0.5677em; */
+	background-color: #B8BFC7;
+	width: 3.05em;
+	height: 0.625em;
+  	padding: 0.04em 0.04em 0.04em 0.04em;
+}
+@media (min-width: 768px) {
+  .tl-sc-navigation-frame {
+    font-size: 118px;
+  }
+}
+@media (min-width: 992px) {
+  .tl-sc-navigation-frame {
+    font-size: 152px;
+  }
+}
+@media (min-width: 1200px) {
+  .tl-sc-navigation-frame {
+    font-size: 184px;
+  }
+}
+.tl-sc-navigation-area {
+	position: relative;
+	width: 3.104em;
+	height: 0.67em;
+	font-size: 0.96em;
+/* 	margin-left: 10px;
+	margin-bottom: 10px; */
+}
+video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+}
+.tl-sc-play-zoomout {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	font-size: 12px;
+    bottom: -25%;
+}
+
+.impress-wrapper {    
+	overflow: hidden;
+	position: relative;
+	height: 700px
+}
+
+.play-control {
+    font-size: 14px;
+    padding-top: 15%;
+    color: white;
+}
+
+.play-control-panel {
+	background-color: #B8BFC7;
+	position: absolute;
+    left: 30%;
+    width: 3.05em;
+    bottom: 0%;
+}
+@media (min-width: 768px) {
+  .play-control-panel {
+    font-size: 118px;
+  }
+}
+@media (min-width: 992px) {
+  .play-control-panel {
+    font-size: 152px;
+  }
+}
+@media (min-width: 1200px) {
+  .play-control-panel {
+    font-size: 184px;
+  }
+}
+
+.hide-panel {
+	text-align: center;
+    padding: 0% 0% 0% 0%;
+	font-size: 12px;
+	height: 20px;
+}
+.hide-panel .expanded {
+	font-size: 9px;
+}
+.tl-sc-play-zoomout-btn {
+	text-align: right;
+    padding: 0% 0% 0% 0%;
+	font-size: 14px;
+    top: 1%;
+    right: 2%;
+    position: absolute;
+}
+
+
+/* slide down and up */
+
+.animate-slide {
+/*   background:red;*/
+  position:absolute; 
+  width: 100%;
+  height:100%;
+  /* top: 0; */
+  -webkit-transform: translate3d(0,0,0); /* Chrome, Safari, Opera */
+  transform: translate3d(0,0,0,);
+ /*  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000; */
+}
+
+.animate-slide.ng-hide-add {
+  display:block!important;
+}
+
+.animate-slide.ng-hide-remove {
+ display:block!important;
+}
+
+.animate-slide.ng-hide-remove.ng-hide-remove-active {
+  -webkit-animation:0.5s slide-up;
+  animation:0.5s slide-up;
+}
+
+.animate-slide.ng-hide-add.ng-hide-add-active {
+  -webkit-animation:0.5s slide-down;
+  animation:0.5s slide-down;
+}
+
+.animate-slide.ng-hide {
+  /* top:80%; */
+  display:none;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slide-up
+{
+  0%   {top:100%;}
+  100%  {top:30%;}
+}
+
+/* Standard syntax */
+@keyframes slide-up
+{
+   0%   {top:100%;}
+  100%  {top:30%;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slide-down
+{
+  0%  {top:30%;}
+  100%   {top:100%;}
+}
+
+/* Standard syntax */
+@keyframes slide-down
+{
+  0%  {top:30%;}
+  100%   {top:100%;}
+}
