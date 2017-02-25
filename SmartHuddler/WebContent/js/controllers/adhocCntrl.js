@@ -53,12 +53,12 @@ $scope.roomList={  "roomStatus":[
 	$scope.getAdhocStatus();
 	
 	$scope.startTimer = function(){
-		var c = 89;
+		var c = 44;
 		$scope.timer = $interval(function(){
 			$scope.timer = "Refreshing in : "+c;
 			c--;
 			if (c == 0) {
-				c=89;
+				c=44;
 				$scope.getAdhocStatus();
 				$scope.timer = "Refreshing Page";
 			};

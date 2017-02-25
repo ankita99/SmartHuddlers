@@ -1,4 +1,4 @@
-conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', '$filter', 'BookRoom','$http','uiTimepickerConfig','$location','$window', function($scope, $mdpTimePicker, $filter, BookRoom,$http,uiTimepickerConfig,$location,$window) {
+conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', '$filter', 'BookRoom','$http','uiTimepickerConfig','$location','$window','usSpinnerService','$rootScope', function($scope, $mdpTimePicker, $filter, BookRoom,$http,uiTimepickerConfig,$location,$window,usSpinnerService,$rootScope) {
 	$scope.message = 'Everyone come and book a room';
 	 $scope.startDateTime =null;
 	 $scope.endDateTime =null;
@@ -16,7 +16,35 @@ conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', '$filter
     });
   };
   
+  $scope.getStatus=false;
+  $scope.startcounter = 0;
+/*  $scope.startSpin = function() {
+    if (!$scope.spinneractive) {
+      usSpinnerService.spin('spinner-1');
+      $scope.startcounter++;
+    }
+  };*/
+
+  /*$scope.stopSpin = function() {
+    if ($scope.spinneractive) {
+      usSpinnerService.stop('spinner-1');
+    }
+  };*/
+  $scope.spinneractive = false;
+
+  $rootScope.$on('us-spinner:spin', function(event, key) {
+    $scope.spinneractive = true;
+  });
+
+  $rootScope.$on('us-spinner:stop', function(event, key) {
+    $scope.spinneractive = false;
+  });
+  
   $scope.getRooms = function(){
+	  if (!$scope.spinneractive) {
+	      usSpinnerService.spin('spinner-1');
+	      $scope.startcounter++;
+	    }
 	  //show available rooms
 	  $scope.showRooms = true;
 	  
@@ -40,6 +68,10 @@ conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', '$filter
 	    success(function(data, status, headers, config) {
 	       console.log(data);
 	       $scope.bookRoomStatus=data;
+	       if ($scope.spinneractive) {
+	    	      usSpinnerService.stop('spinner-1');
+	    	    }
+	       $scope.getStatus=true;
 	      }).
 	      error(function(data, status, headers, config) {
 	      

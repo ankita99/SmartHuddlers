@@ -1,5 +1,5 @@
 	// create the module and name it scotchApp
-	var conferenceApp = angular.module('conferenceApp', ['ngRoute', 'ui.router','ngResource','ngMaterial', 'mdPickers','ui.timepicker']);
+	var conferenceApp = angular.module('conferenceApp', ['ngRoute', 'ui.router','ngResource','ngMaterial', 'mdPickers','ui.timepicker','angularSpinner']);
 
 	// configure our routes
 	conferenceApp.config(function($routeProvider, $mdThemingProvider) {
