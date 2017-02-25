@@ -298,8 +298,9 @@ padding-right: 160px;
 }
 
 .roomname{
-padding-left: 4px;
+/* padding-left: 2px; */
 font-size: 13px;
+width: 60px;
 font-family: verdana, sans-serif;
 }
 .location {
@@ -333,4 +334,21 @@ font-family: verdana, sans-serif;
 }
 .available:hover button.bookbtn {
     display: block;
+}
+
+#sidebar{
+	height: 324px; 
+	margin-top: 10px;
+	padding:0px;
+}
+
+.side{
+	background-color: rgb(3, 64, 125);
+    height: 40px;
+    width: 233px;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
 }

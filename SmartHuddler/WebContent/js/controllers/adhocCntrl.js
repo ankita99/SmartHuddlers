@@ -1,7 +1,5 @@
 conferenceApp.controller('adhocController', ['$scope','$state','$location','$window','$http','$timeout','Status', '$interval','Customer','Adhoc', function($scope, $state, $location, $window, $http, $timeout, Status, $interval,Customer,Adhoc) {
 	$scope.message = 'adhoc controller called.';
-	
-	$scope.rooms=["Pushya","Revati","Anurdha","Rohini","Kritika","Ashwini"];
 	$scope.adhocStatus={};
 	$scope.CurrentDate = new Date();
 	var update = function() {
@@ -10,7 +8,7 @@ conferenceApp.controller('adhocController', ['$scope','$state','$location','$win
 	}
 	$timeout(update, 1000);
 
-$scope.roomList={  "roomStatus":[
+   $scope.roomList={  "roomStatus":[
                              { "name":"Pushya",
                                 "status":"available"
                               },
@@ -31,18 +29,9 @@ $scope.roomList={  "roomStatus":[
                                  "status":"FBO"
                               }
                                ] };
-
-	$scope.getRooms = function(){
-		var roomsData = Status.query(function(){
-			$scope.roomList = roomsData;
-		},function(error){
-			console.log('Error in retrieving rooms data '+error.data);
-		});
-
-	};
 	
 	$scope.getAdhocStatus = function(){
-		var adhocData = Adhoc.query(function(){
+		var adhocData = Adhoc.get(function(){
 			$scope.adhocStatus = adhocData;
 		},function(error){
 			console.log('Error in retrieving rooms data '+error.data);
