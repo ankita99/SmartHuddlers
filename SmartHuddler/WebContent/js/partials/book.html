@@ -1,89 +1,106 @@
-<div class="container" style="padding: 0px;margin: 0px;width: 1400px;max-width: 1500px;height: 300px;">
-<!-- <div class="col-md-2" id="sidebar">
-  <div class="side">Location</div>
-   <div class="side" style="background-color: blue">Persistent Systems</div>
-   <div class="side" style="background-color: light blue">India</div>
-   <div class="side" style="background-color: light blue">Nagpur</div>
-   <div class="side" style="background-color: light blue">Mayetri</div>
-</div> -->
-<div class="col-md-2" id="sidebar">
-  <div class="side" style="background-color: #245682;">Location</div>
-   <div class="side" style="background-color: #3071a9;"><img style="height: 30px;" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">Persistent</div>
-   <div class="side" style="background-color: #428bca;"><img style="height: 25px;" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">India</div>
-   <div class="side" style="background-color: #6aa3d5;"><img style="padding-left: 45px; height: 20px;" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">Nagpur</div>
-   <div class="side" style="background-color: #92bce0;"><img style="padding-left: 55px; height: 15px;" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">Mayetri</div>
-</div>
-<div class="col-md-9">
-<md-card class="appCard" style="
+<div class="container"
+	style="padding: 0px; margin: 0px; width: 1400px; max-width: 1500px; height: 300px;">
+	<div class="col-md-2" id="sidebar">
+		<div class="side" style="background-color: #245682; padding-left: 30px;">Location</div>
+		<div class="side" style="background-color: #3071a9;">
+			<img style="height: 30px;"
+				src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">Persistent
+		</div>
+		<div class="side" style="background-color: #428bca;">
+			<img style="height: 25px;"
+				src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">India
+		</div>
+		<div class="side" style="background-color: #6aa3d5;">
+			<img style="padding-left: 45px; height: 20px;"
+				src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">Nagpur
+		</div>
+		<div class="side" style="background-color: #92bce0;">
+			<img style="padding-left: 55px; height: 15px;"
+				src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-white-pearls-icons-symbols-shapes/017650-black-white-pearl-icon-symbols-shapes-circle-clear.png">Mayetri
+		</div>
+	</div>
+	<div class="col-md-9">
+		<md-card class="appCard" style="
     height: 260px;
-">
-     <md-card-title style="padding-top: 8px;">
-       <md-card-title-text>
-			<div layout="column"" layout-align="center center">
-				<md-card class="appCard" style="width: 980px;margin: 0px; height: 255px;">
-					<md-card-header-text md-colors="::{backgroundColor: 'default-primary-700'}"  style="background-color: rgb(25, 118, 210);color: rgb(255, 255, 255);height: 40px;">
-					     <h3 class="md-title" style="margin-top: 10px;">Book meeting</h3>
-					</md-card-header-text>
-			        <md-card-title style="padding-top: 8px;">
-			          <md-card-title-text>
-						      <form class="meetingForm " name="userForm" style="height: 220px;">
-						      	<div style="height: 40px; padding-top: 15px;"> <h3 style="display: inline; font-size: 16px;">Meeting Title :</h3> <input type="text" ng-model="meetingTitle" placeholder="Enter your meeting title here..." style="width: 650px;padding-left: 10px;border-radius: 3px;">
+"> <md-card-title
+			style="padding-top: 8px;"> <md-card-title-text>
+		<div layout="column" " layout-align="center center">
+			<md-card class="appCard"
+				style="width: 980px;margin: 0px; height: 255px;"> <md-card-header-text
+				md-colors="::{backgroundColor: 'default-primary-700'}"
+				style="background-color: rgb(25, 118, 210);color: rgb(255, 255, 255);height: 40px;">
+			<h3 class="md-title" style="margin-top: 10px;">Book meeting</h3>
+			</md-card-header-text> <md-card-title style="padding-top: 8px;"> <md-card-title-text>
+			<form class="meetingForm " name="userForm" style="height: 220px;">
+				<div style="height: 40px; padding-top: 15px;">
+					<h3 style="display: inline; font-size: 16px;">Meeting Title :</h3>
+					<input type="text" ng-model="meetingTitle"
+						placeholder="Enter your meeting title here..."
+						style="width: 650px; padding-left: 10px; border-radius: 3px;">
+				</div>
+
+				<div class="dateRow" layout-gt-xs="row"
+					style="width: 450px; position: relative; float: left;">
+					<div layout-gt-xs="column"
+						style="width: 40px; height: 40px; margin-top: 8px;">
+						<h3 style="font-size: 16px;">Date:</h3>
+					</div>
+					<div layout-gt-xs="column">
+						<md-input-container> <!-- <label>Date</label>
+						            		 --> <md-datepicker ng-model="meetingDate"></md-datepicker>
+						</md-input-container>
+					</div>
+				</div>
+				<div class="timeRow" layout-gt-sm="row" style="padding-right: 30px;">
+					<div layout-gt-sm="column">
+						<div style="margin-right: 20px;">
+							<h3 style="font-size: 16px;">
+								Time: From <input ng-model="startTime"
+									 placeholder="hh:mm"
+									style="width: 130px;">
+							</h3>
+						</div>
+					</div>
+					<div layout-gt-xs="column">
+						<div>
+							<h3 style="font-size: 16px;">
+								To: <input ng-model="endTime"
+									 placeholder="hh:mm"
+									style="width: 130px;">
+							</h3>
+						</div>
+					</div>
+				</div>
+				<md-card-actions layout="row" layout-align="end center"
+					style=" height: 10px;"> <md-button
+					class="md-raised md-accent" ng-click="getRooms()"
+					style="height: 12px;">Get Rooms</md-button> </md-card-actions>
+			</form>
+			</md-card-title-text> </md-card-title> </md-card>
+		</div>
+		</md-card-title-text> </md-card-title> </md-card>
+	</div>
 </div>
-						      	
-						      	<div class="dateRow" layout-gt-xs="row" style="width: 450px;position: relative;float: left;">
-						      		<div layout-gt-xs="column" style="width: 40px;height: 40px;margin-top: 8px;">
-						      			<h3 style="font-size: 16px;">Date:</h3>
-						      		</div>
-						      		<div layout-gt-xs="column">
-						      			<md-input-container>
-						            		<!-- <label>Date</label>
-						            		 --><md-datepicker ng-model="meetingDate"></md-datepicker>
-						          		</md-input-container>
-						      		</div>
-						      	</div>
-						      	<div class="timeRow" layout-gt-sm="row" style="padding-right: 30px;">
-						      		<div layout-gt-sm="column">
-        								<div style="margin-right: 20px;">
-							              <h3 style="font-size: 16px;">Time:  From <input ng-model="startTime" base-date"meetingDate" placeholder="hh:mm" style="width: 130px;"></h3>
-							   	 </div>
-						      		</div>
-						      		<div layout-gt-xs="column">
-        								<div >
-							              <h3 style="font-size: 16px;"> To: <input  ng-model="endTime" base-date"meetingDate" placeholder="hh:mm" style="width: 130px;"></h3>
-							             </div>
-						      		</div>
-						      	</div>
-						      	<md-card-actions layout="row" layout-align="end center" style=" height: 10px;">
-			         				 <md-button class="md-raised md-accent" ng-click="getRooms()" style="height: 12px;">Get Rooms</md-button>
-			        			</md-card-actions>
-						      </form>
-			          </md-card-title-text>
-			        </md-card-title>
-			        
-			     </md-card>
-			</div>
-       </md-card-title-text>
-     </md-card-title>
-</md-card>
-</div>
-</div>
-  <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="spinner-1"></span>
+<span us-spinner="{radius:30, width:8, length: 16}"
+	spinner-key="spinner-1"></span>
 
 <div ng-if="!spinneractive && getStatus" ng-init='status=1'>
-	<md-card class="appcard" style="height: 250px;">
-		<md-card-header-text md-colors="::{backgroundColor: 'default-primary-700'}" style="background-color: rgb(25, 118, 210);color: rgb(255, 255, 255);height: 40px;">
-			<h3 class="md-title" style="margin-top: 10px;">Available rooms</h3>
-		</md-card-header-text>
-		<md-card-actions layout="row" layout-align="start" flex style="overflow: scroll;">
-			 <div ng-repeat="room in bookRoomStatus.result.roomStatus">
-			  <div ng-class="checkColor(room)">
-			  		<div class="test">
-			  			<label class="roomname">{{room.roomName}}</label>
-			  			<span class="location">M4-Nagpur</span>
-			  			<button class="bookbtn" ng-click=bookRoom(room.roomName)>Book</button></div>
-			  			</div>
-			  		</div>
-			  </div>	
-		</md-card-actions>
-	</md-card>  
- </div>  
+	<md-card class="appcard" style="height: 250px;"> <md-card-header-text
+		md-colors="::{backgroundColor: 'default-primary-700'}"
+		style="background-color: rgb(25, 118, 210);color: rgb(255, 255, 255);height: 40px;">
+	<h3 class="md-title" style="margin-top: 10px;">Available rooms</h3>
+	</md-card-header-text> <md-card-actions layout="row" layout-align="start" flex
+		style="overflow: scroll;">
+	<div ng-repeat="room in bookRoomStatus.result.roomStatus">
+		<div ng-class="checkColor(room)">
+			<div class="test">
+				<label class="roomname">{{room.roomName}}</label> <span
+					class="location">M4-Nagpur</span>
+				<button class="bookbtn" ng-click=bookRoom(room.roomName)>Book</button>
+			</div>
+		</div>
+	</div>
+</div>
+</md-card-actions>
+</md-card>
+</div>
