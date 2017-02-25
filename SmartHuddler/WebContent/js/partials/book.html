@@ -71,12 +71,12 @@
 			<h3 class="md-title" style="margin-top: 10px;">Available rooms</h3>
 		</md-card-header-text>
 		<md-card-actions layout="row" layout-align="start" flex style="overflow: scroll;">
-			 <div ng-repeat="room in rooms">
-			  <div class="available">
+			 <div ng-repeat="room in bookRoomStatus.result.roomStatus">
+			  <div ng-class="checkColor(room)">
 			  		<div class="test">
-			  			<label class="roomname">{{room}}</label>
+			  			<label class="roomname">{{room.roomName}}</label>
 			  			<span class="location">M4-Nagpur</span>
-			  			<button class="bookbtn">Book</button>
+			  			<button class="bookbtn">Book</button></div>
 			  			</div>
 			  		</div>
 			  </div>	

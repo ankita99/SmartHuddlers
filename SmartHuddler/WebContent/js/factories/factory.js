@@ -24,8 +24,17 @@ conferenceApp.factory('Status', ['$resource', function($resource){
     return $resource(CONSTANTS.BASEURL+CONSTANTS.STATUS_API);
 }]);
 
-conferenceApp.factory('Customer', ['$resource', function($resource){
+conferenceApp.factory('BookRoom', ['$resource', function($resource){
     return $resource(CONSTANTS.BASEURL+CONSTANTS.CUST_API);
+}]);
+
+conferenceApp.factory('BookRoom', ['$resource', function($resource){
+    return $resource(CONSTANTS.CALENDARURL+CONSTANTS.CALENDAR_API,{startDateTime:'@startDateTime'}, {endtDateTime:'@endtDateTime'},{
+        save :{
+            method:'POST',
+            headers:{'Content-Type':'application/json;charset=UTF-8'}
+        }
+    });
 }]);
 
 conferenceApp.factory('Adhoc', ['$resource', function($resource){
